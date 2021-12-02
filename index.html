@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="google-site-verification" content="dvEhKnec-YPDrnTWvPxBpRmeKYfOin0w0OeHanN_eQ0" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <title>Bienvenido, selecciona el color más bonito</title>
+    <meta name="description"
+        content="Te mostramos los colores más destacado de la web internet.">
+
+    
+    <link rel="shortcut icon" href="/img/colorhunt-favicon.svg">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <link href="css/style.css" rel="stylesheet" media="all" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+
+        $('.kebab').click(function (e) {
+            if ($('.littleMenu.hidden').length == 1) {
+                $('.kebab').attr('status', 'on');
+                $('.littleMenu').removeClass('hidden');
+            } else {
+                $('.kebab').attr('status', 'off');
+                $('.littleMenu').addClass('hidden');
+            }
+        });
+    });
+    </script>
+
+    <div class="header">
+        <div class="wrap flex">
+            <div class="left">
+                <a href="/" class="logo flex">
+                    <img class="tongue" src="/img/color-hunt-logo-tongue.svg" />
+                    <img src="/img/color-hunt-logo-face.svg" />
+                    <span class="mobileHide">Color</span>
+                </a>
+            </div>
+
+            <div class="middle filterContainer">
+                
+            </div>
+
+            <div class="right flex">
+                <a target="_blank" href=""
+                    class="button addToChrome">
+                    <img class="icon" src="/img/color-hunt-icon-chrome.png" />
+                    Colores bonitos
+                </a>
+                <div class="kebab button iconButton" ><span></span><span></span><span></span></div>
+                <div class="littleMenu dropdown card hidden">
+                    <a class="tab button small" tab="github" href="/">GitHub</a>
+                    <a class="tab button small" tab="twitter" href="/">Twitter</a>
+                    <div class="line"></div>
+                    <a class="tab button small" tab="about" href="/about">About</a>
+                    <a class="tab button small" target="_blank" href="https://instagram.com/color.hunt">Instagram</a>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="line bottom"></div>
+    </div>
+    
+
+    <div class="wrap main flex">
+        <div class="left">
+            <a href="/" class="tab button" tab="new">
+                <div class="icon" icon=new></div>New
+            </a>
+            <a href="/popular" class="tab button" tab="popular">
+                <div class="icon" icon=popular></div>Popular
+            </a>
+            <div class="timeframe hide">
+                <div class="button small" timeframe="30" onclick="changeTimeframe(this)" status="on">Month</div>
+                <div class="button small" timeframe="365" onclick="changeTimeframe(this)">Year</div>
+                <div class="button small" timeframe="4000" onclick="changeTimeframe(this)">All time</div>
+            </div>
+            <a href="/random" class="tab button" tab="random">
+                <div class="icon" icon=random></div>Random
+            </a>
+            <a href="/collection" class="tab button" tab="collection">
+                <div class="icon" icon=like></div>Collection
+            </a>
+            <div class="line"></div>
+            <div class="tags">
+                <a href="/palettes/pastel" class="tab button small tag" tab="pastel">Pastel</a>
+                <a href="/palettes/neon" class="tab button small tag" tab="neon">Neon</a>
+                <a href="/palettes/gold" class="tab button small tag" tab="gold">Gold</a>
+                <a href="/palettes/vintage" class="tab button small tag" tab="vintage">Vintage</a>
+                <a href="/palettes/retro" class="tab button small tag" tab="retro">Retro</a>
+                <a href="/palettes/light" class="tab button small tag" tab="light">Light</a>
+                <a href="/palettes/dark" class="tab button small tag" tab="dark">Dark</a>
+                <a href="/palettes/warm" class="tab button small tag" tab="warm">Warm</a>
+                <a href="/palettes/cold" class="tab button small tag" tab="cold">Cold</a>
+                <a href="/palettes/summer" class="tab button small tag" tab="summer">Summer</a>
+                <a href="/palettes/fall" class="tab button small tag" tab="fall">Fall</a>
+                <a href="/palettes/winter" class="tab button small tag" tab="winter">Winter</a>
+                <a href="/palettes/spring" class="tab button small tag" tab="spring">Spring</a>
+                <a href="/palettes/rainbow" class="tab button small tag" tab="rainbow">Rainbow</a>
+                <a href="/palettes/night" class="tab button small tag" tab="night">Night</a>
+                <a href="/palettes/space" class="tab button small tag" tab="space">Space</a>
+                <a href="/palettes/earth" class="tab button small tag" tab="earth">Earth</a>
+                <a href="/palettes/nature" class="tab button small tag" tab="nature">Nature</a>
+                <a href="/palettes/sunset" class="tab button small tag" tab="sunset">Sunset</a>
+                <a href="/palettes/skin" class="tab button small tag" tab="skin">Skin</a>
+                <a href="/palettes/food" class="tab button small tag" tab="food">Food</a>
+                <a href="/palettes/cream" class="tab button small tag" tab="cream">Cream</a>
+                <a href="/palettes/coffee" class="tab button small tag" tab="coffee">Coffee</a>
+                <a href="/palettes/christmas" class="tab button small tag" tab="christmas">Christmas</a>
+                <a href="/palettes/halloween" class="tab button small tag" tab="halloween">Halloween</a>
+                <a href="/palettes/wedding" class="tab button small tag" tab="wedding">Wedding</a>
+                <a href="/palettes/kids" class="tab button small tag" tab="kids">Kids</a>
+                <a href="/palettes/happy" class="tab button small tag" tab="happy">Happy</a>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="feed global">
+
+                <div class="item" data-index="0" data-code="161853292c6dfaedf0ec255a" style="animation-delay: 0ms;">
+                    <div class="palette">
+                        <div class="place c3" style="background-color: rgb(236, 37, 90);"><a
+                                href="/palette/161853292c6dfaedf0ec255a"></a><span onclick="copy(this)"
+                                data-copy="#EC255A">#EC255A</span></div>
+                        <div class="place c2" style="background-color: rgb(250, 237, 240);"><a
+                                href="/palette/161853292c6dfaedf0ec255a"></a><span onclick="copy(this)"
+                                data-copy="#FAEDF0">#FAEDF0</span></div>
+                        <div class="place c1" style="background-color: rgb(41, 44, 109);"><a
+                                href="/palette/161853292c6dfaedf0ec255a"></a><span onclick="copy(this)"
+                                data-copy="#292C6D">#292C6D</span></div>
+                        <div class="place c0" style="background-color: rgb(22, 24, 83);"><a
+                                href="/palette/161853292c6dfaedf0ec255a"></a><span onclick="copy(this)"
+                                data-copy="#161853">#161853</span></div>
+                    </div>
+                    <div class="flex">
+                        <div class="actions flex">
+                            <div class="button like" onclick="like()">
+                                <div class="icon" icon="like"></div>
+                                <span>242</span>
+                            </div>
+                        </div>
+                        <span class="date">21 hours</span>
+                    </div>
+                </div>
+
+                <div class="item" data-index="1" data-code="ffafaffbffe2ffebccff9999" style="animation-delay: 30ms;">
+                    <div class="palette">
+                        <div class="place c3" style="background-color: rgb(255, 153, 153);"><a
+                                href="/palette/ffafaffbffe2ffebccff9999"></a><span onclick="copy(this)"
+                                data-copy="#FF9999">#FF9999</span></div>
+                        <div class="place c2" style="background-color: rgb(255, 235, 204);"><a
+                                href="/palette/ffafaffbffe2ffebccff9999"></a><span onclick="copy(this)"
+                                data-copy="#FFEBCC">#FFEBCC</span></div>
+                        <div class="place c1" style="background-color: rgb(251, 255, 226);"><a
+                                href="/palette/ffafaffbffe2ffebccff9999"></a><span onclick="copy(this)"
+                                data-copy="#FBFFE2">#FBFFE2</span></div>
+                        <div class="place c0" style="background-color: rgb(255, 175, 175);"><a
+                                href="/palette/ffafaffbffe2ffebccff9999"></a><span onclick="copy(this)"
+                                data-copy="#FFAFAF">#FFAFAF</span></div>
+                    </div>
+                    <div class="flex">
+                        <div class="actions flex">
+                            <div class="button like" onclick="like()">
+                                <div class="icon" icon="like"></div>
+                                <span>519</span>
+                            </div>
+                        </div>
+                        <span class="date">Yesterday</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="meta">
+                <h1>Color Palettes for Designers and Artists</h1>
+                <h2>Discover the newest hand-picked palettes of Color Hunt</h2>
+                <div class="line"></div>
+            </div>
+            <div class="likes">
+                <div class="flex">
+                    <a href="/collection" class="title">Collection</a>
+                </div>
+                <div class="likesList"></div>
+            </div>
+            <div class="ad">
+                <div id="sponsor-banner"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTags() {
+            $('.filterWindow .section').hide();
+            $('.filterWindow .button').remove();
+            query = $('.filterContainer input').val().toLowerCase();
+            $('.tagBank .button').each(function () {
+                tag = $(this).attr('tag');
+                type = $(this).attr('type');
+                if (!type) { type = "collection"; }
+                alt = $(this).attr('alt').split(" ");
+                if (tag.substring(0, query.length) == query) {
+                    $('.filterWindow .' + type).append($(this).clone()).show();
+                }
+                if (alt.includes(query)) {
+                    $('.filterWindow .related').append($(this).clone()).show();
+                }
+            });
+        }
+
+        function toggleTag(tag) {
+            if ($(tag).attr('status') != 'on') {
+                applyTag($(tag).attr('tag'));
+            } else {
+                $('[tag=' + $(tag).attr('tag') + ']').attr('status', 'off');
+                $('.inputContainer [tag=' + $(tag).attr('tag') + ']').remove();
+            }
+            tagString = "";
+            $('.inputContainer .tag[status=on]').each(function () {
+                tagString = tagString + "-" + $(this).attr('tag');
+            });
+            tagString = tagString.substring(1);
+            if (filterRedirect == true) {
+                $('.loader').show();
+                window.location.href = '/palettes/' + tagString;
+            }
+        }
+
+        function applyTag(tag) {
+            $('[tag=' + tag + ']').attr('status', 'on');
+            $('.tagBank [tag=' + tag + ']').clone().insertBefore($('.inputContainer input'));
+            $('.filterContainer input').addClass('filled');
+            $('.filterContainer input').val('');
+            $('.filterContainer input').attr('placeholder', 'Add tag');
+        }
+
+        function changeTimeframe(obj) {
+            $('.timeframe .button').attr('status', 'off')
+            $(obj).attr('status', 'on')
+            $('.loader').show();
+            $('.feed .item').not('.hide').fadeOut(100);
+            step = 0;
+            oktoload = "yes";
+            getFeed();
+        }
+
+        function copy(obj, url) {
+            input = document.createElement('input');
+            input.setAttribute('value', $(obj).attr('data-copy').replace('#', ''));
+            if (url) {
+                input.setAttribute('value', document.URL);
+                ga('send', 'event', 'interaction', 'copy_link');
+            } else {
+                ga('send', 'event', 'interaction', 'copy');
+            }
+            document.body.appendChild(input);
+            input.select();
+            result = document.execCommand('copy');
+            document.body.removeChild(input)
+            setTimeout(function () { $('.copied').remove(); }, 1000);
+            $(obj).append("<div class='copied'>Copied</div>");
+        }
+
+        function formatThousands(n, dp) {
+            var s = '' + (Math.floor(n)), d = n % 1, i = s.length, r = '';
+            while ((i -= 3) > 0) { r = ',' + s.substr(i, 3) + r; }
+            return s.substr(0, i + 3) + r + (d ? '.' + Math.round(d * Math.pow(10, dp || 2)) : '');
+        }
+
+        function like(code) {
+            if (myCollection.indexOf(code) == -1) {
+                myCollection.push(code);
+                $('.item[data-code=' + code + '] .like').attr('status', 'on');
+                $.post("/php/like.php", { code: code }, function (data) { });
+                curlikes = $('.item[data-code=' + code + ']:last').find('.like span').text().replace(',', '');
+                curlikes++;
+                curlikes = formatThousands(curlikes);
+                $('.item[data-code=' + code + ']').find('.like span').text(curlikes);
+                ga('send', 'event', 'interaction', 'like');
+                placeItem('likesList', code);
+                $('.right .likes').show();
+                if ($('#like_tip').length > 0) {
+                    $('#like_tip').remove();
+                    ga('send', 'event', 'interaction', 'like_after_tip');
+                }
+                $('.likes').append("<div class='tip saved'>Saved!</div>");
+                $('.tongue').addClass('animate');
+                setTimeout(function () { $('.tongue').removeClass('animate'); }, 800)
+            } else {
+                myCollection.splice(myCollection.indexOf(code), 1);
+                $('.item[data-code=' + code + '] .like').attr('status', 'off');
+                $('.likes .palette[data-code=' + code + ']').remove();
+                var curlikes = $('.item[data-code=' + code + ']:last').find('.like span').text().replace(',', '');
+                curlikes--;
+                curlikes = formatThousands(curlikes);
+                $('.item[data-code=' + code + ']').find('.like span').text(curlikes);
+            }
+            localStorage.setItem('myCollection', myCollection);
+        }
+
+        function carbonAd() {
+            if (carbonRendered != true) {
+                carbonRendered = true;
+                script = document.createElement('script');
+                script.onload = function () {
+                    //do stuff with the script
+                    if (typeof _bsa !== 'undefined' && _bsa) {
+                        _bsa.init('custom', 'CK7DCK7E', 'placement:colorhuntco',
+                            {
+                                target: '#sponsor-banner',
+                                carbonfallback: 'CKYIP27I',
+                                disable_css: true,
+                                template: `
+		<div id="carbonads">
+		  <span>
+		    <span class="carbon-wrap">
+		      <a href="##statlink##" class="carbon-img" target="_blank" rel="noopener" style="background-color: ##backgroundColor##; padding: 28px 10px; max-width: 100%;">
+		        <img src="##logo##" alt="##company## - ##tagline##" border="0" height="100" width="100%" style="width: 110px; height: auto;">
+		      </a>
+		      <a href="##statlink##" class="carbon-text" target="_blank" rel="noopener">##description##</a>
+		    </span>
+		    <a href="##ad_via_link##" class="carbon-poweredby" target="_blank" rel="noopener">ads via BuySellAds</a>
+		  </span>
+		</div>
+		    `
+                            }
+                        );
+                    }
+                };
+                script.src = "//m.servedby-buysellads.com/monetization.js";
+                document.head.appendChild(script);
+            }
+        }
+    </script>
+</body>
+
+</html>
