@@ -77,53 +77,20 @@
     <div class="wrap main flex">
         <div class="left">
             <a href="/" class="tab button" tab="new">
-                <div class="icon" icon=new></div>New
+                <div class="icon" icon=new></div>Facebook
             </a>
-            <a href="/popular" class="tab button" tab="popular">
-                <div class="icon" icon=popular></div>Popular
+            <a href="/twitter" class="tab button" tab="twitter">
+                <div class="icon" icon=twitter></div>Twitter
             </a>
-            <div class="timeframe hide">
-                <div class="button small" timeframe="30" onclick="changeTimeframe(this)" status="on">Month</div>
-                <div class="button small" timeframe="365" onclick="changeTimeframe(this)">Year</div>
-                <div class="button small" timeframe="4000" onclick="changeTimeframe(this)">All time</div>
-            </div>
-            <a href="/random" class="tab button" tab="random">
-                <div class="icon" icon=random></div>Random
+            
+            <a href="/reddit" class="tab button" tab="random">
+                <div class="icon" icon=reddit></div>Reddit
             </a>
-            <a href="/collection" class="tab button" tab="collection">
-                <div class="icon" icon=like></div>Collection
+            <a href="/otros" class="tab button" tab="otros">
+                <div class="icon" icon=otros></div>Otros
             </a>
             <div class="line"></div>
-            <div class="tags">
-                <a href="/palettes/pastel" class="tab button small tag" tab="pastel">Pastel</a>
-                <a href="/palettes/neon" class="tab button small tag" tab="neon">Neon</a>
-                <a href="/palettes/gold" class="tab button small tag" tab="gold">Gold</a>
-                <a href="/palettes/vintage" class="tab button small tag" tab="vintage">Vintage</a>
-                <a href="/palettes/retro" class="tab button small tag" tab="retro">Retro</a>
-                <a href="/palettes/light" class="tab button small tag" tab="light">Light</a>
-                <a href="/palettes/dark" class="tab button small tag" tab="dark">Dark</a>
-                <a href="/palettes/warm" class="tab button small tag" tab="warm">Warm</a>
-                <a href="/palettes/cold" class="tab button small tag" tab="cold">Cold</a>
-                <a href="/palettes/summer" class="tab button small tag" tab="summer">Summer</a>
-                <a href="/palettes/fall" class="tab button small tag" tab="fall">Fall</a>
-                <a href="/palettes/winter" class="tab button small tag" tab="winter">Winter</a>
-                <a href="/palettes/spring" class="tab button small tag" tab="spring">Spring</a>
-                <a href="/palettes/rainbow" class="tab button small tag" tab="rainbow">Rainbow</a>
-                <a href="/palettes/night" class="tab button small tag" tab="night">Night</a>
-                <a href="/palettes/space" class="tab button small tag" tab="space">Space</a>
-                <a href="/palettes/earth" class="tab button small tag" tab="earth">Earth</a>
-                <a href="/palettes/nature" class="tab button small tag" tab="nature">Nature</a>
-                <a href="/palettes/sunset" class="tab button small tag" tab="sunset">Sunset</a>
-                <a href="/palettes/skin" class="tab button small tag" tab="skin">Skin</a>
-                <a href="/palettes/food" class="tab button small tag" tab="food">Food</a>
-                <a href="/palettes/cream" class="tab button small tag" tab="cream">Cream</a>
-                <a href="/palettes/coffee" class="tab button small tag" tab="coffee">Coffee</a>
-                <a href="/palettes/christmas" class="tab button small tag" tab="christmas">Christmas</a>
-                <a href="/palettes/halloween" class="tab button small tag" tab="halloween">Halloween</a>
-                <a href="/palettes/wedding" class="tab button small tag" tab="wedding">Wedding</a>
-                <a href="/palettes/kids" class="tab button small tag" tab="kids">Kids</a>
-                <a href="/palettes/happy" class="tab button small tag" tab="happy">Happy</a>
-            </div>
+            
         </div>
 
         <div class="page">
@@ -146,7 +113,7 @@
                     </div>
                     <div class="flex">
                         <div class="actions flex">
-                            <div class="button like" onclick="like()">
+                            <div class="button like" onclick="like(2)">
                                 <div class="icon" icon="like"></div>
                                 <span>242</span>
                             </div>
@@ -185,16 +152,11 @@
 
         <div class="right">
             <div class="meta">
-                <h1>Color Palettes for Designers and Artists</h1>
-                <h2>Discover the newest hand-picked palettes of Color Hunt</h2>
+                <h1>Colores conocidos</h1>
+                <h2>La mayoría de los colores de las redes sociales, y favoritos que existen en la Internet</h2>
                 <div class="line"></div>
             </div>
-            <div class="likes">
-                <div class="flex">
-                    <a href="/collection" class="title">Collection</a>
-                </div>
-                <div class="likesList"></div>
-            </div>
+            
             <div class="ad">
                 <div id="sponsor-banner"></div>
             </div>
@@ -202,49 +164,6 @@
     </div>
 
     <script>
-        function showTags() {
-            $('.filterWindow .section').hide();
-            $('.filterWindow .button').remove();
-            query = $('.filterContainer input').val().toLowerCase();
-            $('.tagBank .button').each(function () {
-                tag = $(this).attr('tag');
-                type = $(this).attr('type');
-                if (!type) { type = "collection"; }
-                alt = $(this).attr('alt').split(" ");
-                if (tag.substring(0, query.length) == query) {
-                    $('.filterWindow .' + type).append($(this).clone()).show();
-                }
-                if (alt.includes(query)) {
-                    $('.filterWindow .related').append($(this).clone()).show();
-                }
-            });
-        }
-
-        function toggleTag(tag) {
-            if ($(tag).attr('status') != 'on') {
-                applyTag($(tag).attr('tag'));
-            } else {
-                $('[tag=' + $(tag).attr('tag') + ']').attr('status', 'off');
-                $('.inputContainer [tag=' + $(tag).attr('tag') + ']').remove();
-            }
-            tagString = "";
-            $('.inputContainer .tag[status=on]').each(function () {
-                tagString = tagString + "-" + $(this).attr('tag');
-            });
-            tagString = tagString.substring(1);
-            if (filterRedirect == true) {
-                $('.loader').show();
-                window.location.href = '/palettes/' + tagString;
-            }
-        }
-
-        function applyTag(tag) {
-            $('[tag=' + tag + ']').attr('status', 'on');
-            $('.tagBank [tag=' + tag + ']').clone().insertBefore($('.inputContainer input'));
-            $('.filterContainer input').addClass('filled');
-            $('.filterContainer input').val('');
-            $('.filterContainer input').attr('placeholder', 'Add tag');
-        }
 
         function changeTimeframe(obj) {
             $('.timeframe .button').attr('status', 'off')
@@ -277,71 +196,6 @@
             var s = '' + (Math.floor(n)), d = n % 1, i = s.length, r = '';
             while ((i -= 3) > 0) { r = ',' + s.substr(i, 3) + r; }
             return s.substr(0, i + 3) + r + (d ? '.' + Math.round(d * Math.pow(10, dp || 2)) : '');
-        }
-
-        function like(code) {
-            if (myCollection.indexOf(code) == -1) {
-                myCollection.push(code);
-                $('.item[data-code=' + code + '] .like').attr('status', 'on');
-                $.post("/php/like.php", { code: code }, function (data) { });
-                curlikes = $('.item[data-code=' + code + ']:last').find('.like span').text().replace(',', '');
-                curlikes++;
-                curlikes = formatThousands(curlikes);
-                $('.item[data-code=' + code + ']').find('.like span').text(curlikes);
-                ga('send', 'event', 'interaction', 'like');
-                placeItem('likesList', code);
-                $('.right .likes').show();
-                if ($('#like_tip').length > 0) {
-                    $('#like_tip').remove();
-                    ga('send', 'event', 'interaction', 'like_after_tip');
-                }
-                $('.likes').append("<div class='tip saved'>Saved!</div>");
-                $('.tongue').addClass('animate');
-                setTimeout(function () { $('.tongue').removeClass('animate'); }, 800)
-            } else {
-                myCollection.splice(myCollection.indexOf(code), 1);
-                $('.item[data-code=' + code + '] .like').attr('status', 'off');
-                $('.likes .palette[data-code=' + code + ']').remove();
-                var curlikes = $('.item[data-code=' + code + ']:last').find('.like span').text().replace(',', '');
-                curlikes--;
-                curlikes = formatThousands(curlikes);
-                $('.item[data-code=' + code + ']').find('.like span').text(curlikes);
-            }
-            localStorage.setItem('myCollection', myCollection);
-        }
-
-        function carbonAd() {
-            if (carbonRendered != true) {
-                carbonRendered = true;
-                script = document.createElement('script');
-                script.onload = function () {
-                    //do stuff with the script
-                    if (typeof _bsa !== 'undefined' && _bsa) {
-                        _bsa.init('custom', 'CK7DCK7E', 'placement:colorhuntco',
-                            {
-                                target: '#sponsor-banner',
-                                carbonfallback: 'CKYIP27I',
-                                disable_css: true,
-                                template: `
-		<div id="carbonads">
-		  <span>
-		    <span class="carbon-wrap">
-		      <a href="##statlink##" class="carbon-img" target="_blank" rel="noopener" style="background-color: ##backgroundColor##; padding: 28px 10px; max-width: 100%;">
-		        <img src="##logo##" alt="##company## - ##tagline##" border="0" height="100" width="100%" style="width: 110px; height: auto;">
-		      </a>
-		      <a href="##statlink##" class="carbon-text" target="_blank" rel="noopener">##description##</a>
-		    </span>
-		    <a href="##ad_via_link##" class="carbon-poweredby" target="_blank" rel="noopener">ads via BuySellAds</a>
-		  </span>
-		</div>
-		    `
-                            }
-                        );
-                    }
-                };
-                script.src = "//m.servedby-buysellads.com/monetization.js";
-                document.head.appendChild(script);
-            }
         }
     </script>
 </body>
