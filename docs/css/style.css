@@ -84,15 +84,18 @@ a {
 	width: 30px;
 	height: 100%;
 	flex-shrink: 0;
-	background-image: url('/img/favicon.ico');
+	background-image: url('/docs/img/colorhunt-icons.svg');
 	background-repeat: no-repeat ;
 	background-position-y: 50%;
 	background-position-x: 0;
 }
-.icon[icon=new] {
+.icon[icon=facebook] {
+	background-position-x:-0px ;
+}
+.icon[icon=twitter] {
 	background-position-x:-30px ;
 }
-.icon[icon=popular] {
+.icon[icon=reddit] {
 	background-position-x:-60px ;
 }
 .icon[icon=random] {
@@ -513,7 +516,7 @@ input {
 	height: calc(100vh - 90px);
 	position: sticky;
 }
-.main .left {
+.main {
 	overflow-y: scroll;
 }
 .tab {
