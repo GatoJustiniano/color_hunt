@@ -516,9 +516,6 @@ input {
 	height: calc(100vh - 90px);
 	position: sticky;
 }
-.main {
-	overflow-y: scroll;
-}
 .tab {
 	font-size: 17px;
 	opacity: 0.8;
