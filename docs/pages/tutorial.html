@@ -1,12 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial de CSS</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="google-site-verification" content="dvEhKnec-YPDrnTWvPxBpRmeKYfOin0w0OeHanN_eQ0" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <title>Receta de Paletas</title>
+    <meta name="description"
+        content="Sugerencias y tips de colores web.">
+
+    
+    <link rel="shortcut icon" href="docs/img/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <link href="docs/css/style.css" rel="stylesheet" media="all" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+
 <body>
     
+    <script>
+        $(document).ready(function () {
+
+        $('.kebab').click(function (e) {
+            if ($('.littleMenu.hidden').length == 1) {
+                $('.kebab').attr('status', 'on');
+                $('.littleMenu').removeClass('hidden');
+            } else {
+                $('.kebab').attr('status', 'off');
+                $('.littleMenu').addClass('hidden');
+            }
+        });
+    });
+    </script>
+
+    <div class="header">
+        <div class="wrap flex">
+            <div class="left">
+                <a href="/" class="logo flex">
+                    <img class="tongue" src="docs/img/favicon.ico" />
+                    <img src="docs/img/favicon.ico" />
+                    <span class="mobileHide">Justiniano</span>
+                </a>
+            </div>
+
+            <div class="middle filterContainer">
+                
+            </div>
+
+            <div class="right flex">
+                <a target="_blank" href=""
+                    class="button addToChrome">
+                    <img class="icon" src="docs/img/Flag_of_Bolivia.svg" />
+                    Colores bonitos
+                </a>
+                <div class="kebab button iconButton" ><span></span><span></span><span></span></div>
+                <div class="littleMenu dropdown card hidden">
+                    <a class="tab button small" tab="github" href="/">GitHub</a>
+                    <a class="tab button small" tab="twitter" href="/">Twitter</a>
+                    <div class="line"></div>
+                    <a class="tab button small" tab="about" href="/about">About</a>
+                    <a class="tab button small" target="_blank" href="/">Instagram</a>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="line bottom"></div>
+    </div>
+    
+
+    <div class="wrap main flex">
+        <div class="left">
+            <a href="/" class="tab button" tab="facebook">
+                <div class="icon" icon="facebook"></div> Facebook
+            </a>
+            <a href="/twitter" class="tab button" tab="twitter">
+                <div class="icon" icon="twitter"></div> Twitter
+            </a>
+            
+            <a href="/reddit" class="tab button" tab="random">
+                <i class="icon" icon="reddit"></i> Reddit
+            </a>
+            <a href="/" class="tab button" tab="otros">
+                <i class="icon " icon="otros" ></i> Otros
+            </a>
+            <div class="line"></div>
+            
+        </div>
+
+        <div class="page">
+            <div class="feed global">
+
+                <p>
+                    El color es poderoso: puede cambiar radicalmente nuestro estado de ánimo, inspirarnos y ayudarnos a expresarnos de una manera que pocas otras cosas pueden hacer. Es un componente fundamental del diseño, pero también puede resultar un poco intimidante. 
+                </p>
+                <p>
+                    A menudo, cuando se nos da la oportunidad de jugar con el color, nos congelamos. Elegir solo uno puede ser suficiente para desencadenar una especie de pesadilla iridiscente, ¡sin mencionar combinar muchos de ellos! Las opciones son infinitas y las “reglas” algo confusas… una combinación potencialmente abrumadora, particularmente para aquellos de nosotros acostumbrados al (a menudo) mundo más definido del código. 
+                </p>
+
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="meta">
+                <h1>Colores conocidos</h1>
+                <h2>Colores de las redes sociales, y favoritos que existen en la Internet</h2>
+                <div class="line"></div>
+                <h2>Busca entre las paletas y puedes seleccionar el color que te guste, obteniendo su código CSS dándole clic en # los números hexadecimales.</h2>
+                <h2>Disfruta y colorea :3</h2>
+            </div>
+            
+            <div class="ad">
+                <div id="sponsor-banner"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function copy(obj) {
+            input = document.createElement('input');
+            input.setAttribute('value', $(obj).attr('data-copy').replace('#', ''));
+            
+            document.body.appendChild(input);
+            input.select();
+            result = document.execCommand('copy');
+            document.body.removeChild(input)
+            setTimeout(function () { $('.copied').remove(); }, 1000);
+            $(obj).append("<div class='copied'>Copiado</div>");
+        }
+
+    </script>
 </body>
+
 </html>
