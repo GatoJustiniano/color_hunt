@@ -1,7 +1,7 @@
 /**************** GLOBAL ****************/
 body {
 	font-family: 'Poppins', sans-serif;
-	font-size:12px;
+	font-size:14px;
 	color: rgba(0,0,0,0.9);
 	margin: 0;
 	padding-top: 70px;
@@ -953,6 +953,13 @@ h2 {
 	.contentPage .meta {
     padding: 0 14px;
    }
+}
+
+/**************** Extras ****************/
+.contenido-central{
+	padding: 5%;
+	font-size: medium;
+	width: 75% !important;
 }
 
 
