@@ -9,13 +9,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
     <title>Receta de Paletas</title>
-    <meta name="description"
-        content="Sugerencias y tips de colores web.">
+    <meta name="description" content="Sugerencias y tips de colores web.">
 
-    
+
     <link rel="shortcut icon" href="docs/img/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="//fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
@@ -25,20 +24,20 @@
 </head>
 
 <body>
-    
+
     <script>
         $(document).ready(function () {
 
-        $('.kebab').click(function (e) {
-            if ($('.littleMenu.hidden').length == 1) {
-                $('.kebab').attr('status', 'on');
-                $('.littleMenu').removeClass('hidden');
-            } else {
-                $('.kebab').attr('status', 'off');
-                $('.littleMenu').addClass('hidden');
-            }
+            $('.kebab').click(function (e) {
+                if ($('.littleMenu.hidden').length == 1) {
+                    $('.kebab').attr('status', 'on');
+                    $('.littleMenu').removeClass('hidden');
+                } else {
+                    $('.kebab').attr('status', 'off');
+                    $('.littleMenu').addClass('hidden');
+                }
+            });
         });
-    });
     </script>
 
     <div class="header">
@@ -52,16 +51,15 @@
             </div>
 
             <div class="middle filterContainer">
-                
+
             </div>
 
             <div class="right flex">
-                <a target="_blank" href=""
-                    class="button addToChrome">
+                <a target="_blank" href="" class="button addToChrome">
                     <img class="icon" src="docs/img/Flag_of_Bolivia.svg" />
                     Colores bonitos
                 </a>
-                <div class="kebab button iconButton" ><span></span><span></span><span></span></div>
+                <div class="kebab button iconButton"><span></span><span></span><span></span></div>
                 <div class="littleMenu dropdown card hidden">
                     <a class="tab button small" tab="github" href="/">GitHub</a>
                     <a class="tab button small" tab="twitter" href="/">Twitter</a>
@@ -74,7 +72,7 @@
         </div>
         <div class="line bottom"></div>
     </div>
-    
+
 
     <div class="wrap main flex">
         <div class="left">
@@ -84,7 +82,7 @@
             <a href="#LCH_color" class="tab button" tab="twitter">
                 LCHcolor
             </a>
-            
+
             <a href="/reddit" class="tab button" tab="random">
                 Reddit
             </a>
@@ -92,7 +90,7 @@
                 Otros
             </a>
             <div class="line"></div>
-            
+
         </div>
 
         <div class="page">
@@ -100,65 +98,95 @@
                 <section id="introducción">
                     <h1>Introducción</h1>
                     <p>
-                        El color es poderoso: puede cambiar radicalmente nuestro estado de ánimo, inspirarnos y ayudarnos a expresarnos de una manera que pocas otras cosas pueden hacer. Es un componente fundamental del diseño, pero también puede resultar un poco intimidante. 
+                        <em>El color es poderoso: </em> puede cambiar radicalmente nuestro estado de ánimo, inspirarnos
+                        y ayudarnos a expresarnos de una
+                        manera que pocas otras cosas pueden hacer. Es un componente fundamental del diseño, pero también
+                        puede resultar <em>un poco
+                            intimidante</em>.
                     </p>
                     <p>
-                        A menudo, cuando se nos da la oportunidad de jugar con el color, nos congelamos. Elegir solo uno puede ser suficiente para desencadenar una especie de pesadilla iridiscente, ¡sin mencionar combinar muchos de ellos! Las opciones son infinitas y las “reglas” algo confusas… una combinación potencialmente abrumadora, particularmente para aquellos de nosotros acostumbrados al (a menudo) mundo más definido del código. 
+                        A menudo, cuando se nos da la oportunidad de jugar con el color, <em>nos congelamos</em>. Elegir
+                        solo uno puede ser suficiente
+                        para desencadenar una especie de pesadilla iridiscente, <em>¡sin mencionar combinar muchos de
+                            ellos!</em> Las opciones son
+                        infinitas y las “reglas” algo confusas… una combinación potencialmente abrumadora,
+                        particularmente para aquellos de
+                        nosotros acostumbrados al (a menudo) mundo más definido del código.
                     </p>
                     <p>
-                        En este tutorial, aprenderemos a usar herramientas familiares, un editor de texto y un navegador web, para hacer que el proceso de creación de paletas de colores llamativas sea mucho menos aterrador y (¡lo más importante!) Divertido. 
+                        En este tutorial, aprenderemos a usar herramientas familiares, un editor de texto y un navegador
+                        web, para hacer que el
+                        proceso de creación de paletas de colores llamativas sea mucho menos aterrador y (¡lo más
+                        importante!) Divertido.
                     </p>
                 </section>
 
                 <div class="line"></div>
-                
+
                 <section id="LCH_color">
                     <h1>LCH color</h1>
                     <article>
                         <p>
-                            A lo largo de este tutorial, trabajaremos casi exclusivamente con colores LCH. LCH significa claridad (qué tan oscuro / claro es un color), croma (qué tan vivo / saturado es un color) y tono (si un color es rojo, verde, azul ...). 
+                            A lo largo de este tutorial, trabajaremos casi exclusivamente con colores LCH. LCH significa
+                            claridad (<em>qué tan oscuro</em> /
+                            <em>claro es un color</em> ), croma ( <em>qué tan vivo / saturado es un color</em> ) y tono ( <em>si un color es rojo,
+                                verde, azul ...</em> ).
                         </p>
                         <p>
-                            En resumen, LCH es una forma de representar el color como RGB o HSL, pero con algunas ventajas notables, la más importante para este tutorial es su uniformidad de percepción. Sé que esto suena un poco aterrador, pero te prometo que no; ¡déjame mostrarte lo que significa! 
+                            En resumen, LCH es una forma de representar el color como RGB o HSL, pero con algunas
+                            ventajas notables, la más importante para este tutorial es su uniformidad de percepción. Sé
+                            que esto suena un poco aterrador, pero te prometo que no; <em>¡déjame mostrarte lo que
+                                significa!</em>
                         </p>
                         <p>
-                            To start, take a look at these two pairs of HSL colors: 
+                            Mira esto colores: 
                         </p>
-                        <img src="/docs/img/img_tutorial/LCH_color-hsl-hue-shift-comparison.png" alt="" >
+                        <img src="/docs/img/img_tutorial/LCH_color-hsl-hue-shift-comparison.png" alt="">
                     </article>
 
                     <article>
                         <p>
-                            ¿Observa cómo, a pesar de que los pares superior e inferior tienen la misma variación de tono de 20 grados, la diferencia que realmente vemos es tremendamente diferente? Este desequilibrio existe porque HSL no es perceptualmente uniforme. 
+                            ¿Observa cómo, a pesar de que los pares superior e inferior tienen la misma variación de
+                            tono de 20 grados, <em>la diferencia que realmente vemos es tremendamente diferente?</em> Este
+                            desequilibrio existe porque HSL no es perceptualmente uniforme.
                         </p>
                         <p>
-                            Ahora eche un vistazo al mismo experimento, esta vez usando colores LCH: 
+                            Ahora mira al mismo experimento, esta vez usando colores LCH:
                         </p>
                         <img src="/docs/img/img_tutorial/LCH_color-lch-hue-shift.png" alt="">
                     </article>
 
                     <article>
                         <p>
-                            👋: los valores de tono no se alinean perfectamente entre HSL y LCH. En LCH, un tono de 0 es más rosado, mientras que en HSL, es un rojo puro. 
+                            <em>
+                                👋: los valores de tono no se alinean perfectamente entre HSL y LCH. En LCH, un tono de 0 es
+                            más rosado, mientras que en HSL, es un rojo puro.
+                            </em>
                         </p>
                         <p>
-                            ¡Ah, mucho mejor! El cambio de tono que se ve aquí es mucho más equilibrado porque el LCH es perceptualmente uniforme. 
+                            ¡Ah, mucho mejor! El cambio de tono que se ve aquí es mucho más equilibrado porque el LCH es
+                            perceptualmente uniforme.
                         </p>
                         <p>
-                            A continuación, echemos un vistazo a otros dos colores HSL: 
+                            A continuación, echemos un vistazo a otros dos colores HSL:
                         </p>
                         <img src="/docs/img/img_tutorial/LCH_color3-hs-lightness-comparison.png" alt="">
 
                         <p>
-                            Estos dos colores tienen valores de luminosidad idénticos pero parecen muy diferentes a nuestros ojos humanos. El amarillo de la izquierda es mucho más "brillante" que el azul de la derecha. 
+                            Estos dos colores tienen valores de luminosidad idénticos pero parecen muy diferentes a
+                            nuestros ojos humanos. El amarillo de la izquierda es mucho más "brillante" que el azul de
+                            la derecha.
                         </p>
                         <p>
-                            A continuación, se muestra una configuración similar, pero con colores LCH en lugar de HSL: 
+                            A continuación, se muestra una configuración similar, pero con colores LCH en lugar de HSL:
                         </p>
                         <img src="/docs/img/img_tutorial/LCH_color4-lch-lightness-comparison.png" alt="">
 
                         <p>
-                            ¡Eso es más parecido! Como lo demuestra la imagen de arriba, los valores de luminosidad en LCH son representaciones mucho más precisas de lo que percibimos; esto, en combinación con la distribución uniforme de tonos de LCH, facilitará mucho nuestras vidas al crear paletas de colores armoniosas. 
+                            <em>¡Eso es más parecido!</em> Como lo demuestra la imagen de arriba, los valores de luminosidad en
+                            LCH son representaciones mucho más precisas de lo que percibimos; esto, en combinación con
+                            la distribución uniforme de tonos de LCH, facilitará mucho nuestras vidas al crear paletas
+                            de colores armoniosas.
                         </p>
 
                     </article>
@@ -174,10 +202,11 @@
                 <h1>Colores conocidos</h1>
                 <h2>Colores de las redes sociales, y favoritos que existen en la Internet</h2>
                 <div class="line"></div>
-                <h2>Busca entre las paletas y puedes seleccionar el color que te guste, obteniendo su código CSS dándole clic en # los números hexadecimales.</h2>
+                <h2>Busca entre las paletas y puedes seleccionar el color que te guste, obteniendo su código CSS dándole
+                    clic en # los números hexadecimales.</h2>
                 <h2>Disfruta y colorea :3</h2>
             </div>
-            
+
             <div class="ad">
                 <div id="sponsor-banner"></div>
                 Publicidad
@@ -190,7 +219,7 @@
         function copy(obj) {
             input = document.createElement('input');
             input.setAttribute('value', $(obj).attr('data-copy').replace('#', ''));
-            
+
             document.body.appendChild(input);
             input.select();
             result = document.execCommand('copy');
